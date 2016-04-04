@@ -16,5 +16,6 @@ RUN git clone https://github.com/scristofari/myvim.git ~/.vim
 RUN cp ~/.vim/vimrc ~/.vimrc
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
+RUN vim +GoInstallBinaries +qall
 
 ENTRYPOINT zsh

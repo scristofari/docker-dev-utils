@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM golang:1.5-alpine
 
 MAINTAINER Sylvain Cristofari <s.cristofari@gmail.com>
 
@@ -18,4 +18,4 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.v
 RUN vim +PluginInstall +qall
 RUN vim +GoInstallBinaries +qall
 
-ENTRYPOINT zsh
+ENTRYPOINT ["zsh"]
